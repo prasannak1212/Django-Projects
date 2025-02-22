@@ -1,0 +1,45 @@
+.create-btn {
+    background-color: #0b6f1ddd;
+    color: aliceblue;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.table-cont {
+    width: 100%;
+    overflow: scroll;
+    /* scrollbar-color: red orange; */
+    scrollbar-width: thin;
+    scrollbar-gutter: stable both-edges;
+}
+
+table {
+    margin: 5px;
+    /* border: 1px solid #5a1a32; */
+    border-radius: 10px;
+    text-align: center;
+}
+
+.container table thead th {
+    margin: 5px;
+    padding: 10px;
+    background-color: #fff;
+    /* border: 5px solid #5a1a32; */
+}
+
+.container table tbody td {
+    margin: 5px;
+    padding: 10px;
+    background-color: #fff;
+    color: #5a1a32;
+    /* border: 5px solid #5a1a32; */
+}
+
+td i {
+    color: #046b4e;
+}
+
+td i:hover {
+    color: #5a1a32;
+}

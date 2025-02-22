@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Crudify - Home {% endblock title %}
+{% block extrahead %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+{% endblock extrahead %}
+
+{% block content %}
+<body>
+    <div class="main text-center">
+        <h3>Welcome to Crudify!</h3>
+        <p>Manage your records effectively.</p>
+        <br>
+        <hr>
+        <br>
+        <a href="{% url 'register' %}" class="btn create-account">Create your account <i class="fa-solid fa-user-plus"></i></a>
+    </div>
+</body>
+{% endblock content %}

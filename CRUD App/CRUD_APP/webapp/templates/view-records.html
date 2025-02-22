@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %} Crudify - Records {% endblock title %}
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'css/view-records.css' %}">
+{% endblock extrahead %}
+
+{% block content %}
+<body>
+    <div class="card">
+        <div class="card-header">
+            <h2>{{record.first_name}} {{record.last_name}}</h2>
+        </div>
+        <div class="card-body">
+            <p><strong>ID: </strong>{{record.id}}</p>
+            <p><strong>Phone: </strong>{{record.phone}}</p>
+            <p><strong>Email: </strong>{{record.email}}</p>
+            <p><strong>Address: </strong>{{record.address}}</p>
+            <p><strong>City: </strong>{{record.city}}</p>
+            <p><strong>Province: </strong>{{record.province}}</p>
+            <p><strong>Country: </strong>{{record.country}}</p>
+            <p><strong>Creation Date: </strong>{{record.creation_date}}</p>
+        </div>
+        <div class="card-footer d-flex justify-content-end">
+            <a href="{% url 'dashboard' %}" class="btn return-btn">Return <i class="fa-duotone fa-solid fa-people-pulling"></i></a>
+            <a href="{% url 'update-record' record.id %}" class="btn update-btn">Update <i class="fa-solid fa-pen-to-square"></i></a>
+            <a href="{% url 'delete-record' record.id%}" class="btn delete-btn">Delete <i class="fa-sharp-duotone fa-solid fa-trash"></i></a>
+        </div>
+    </div>
+</body>
+{% endblock content %}

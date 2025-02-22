@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %} Crudigy - Create Records {% endblock title %}
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'css/create-records.css' %}">
+{% endblock extrahead %}
+
+{% block content %}
+<body>
+    <div class="record-form">
+        <h2>Create your records here!</h2>
+        <hr>
+        <form method="post">
+            {% csrf_token %}
+            {{form|crispy}}
+            <br>
+            <button type='submit' class="btn create-record-btn" href="{% url 'dashboard' %}">Create Record</button>
+        </form>
+    </div>
+</body>
+{% endblock content %}

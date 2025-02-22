@@ -1,0 +1,31 @@
+.btn {
+    background-color: #5a1a32;
+    color: #a8a8aa;
+}
+
+/* body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+
+.form-layout {
+    border: 1px solid #5a1a32;
+    padding: 15px;
+    width: 70%;
+    border-radius: 10px;
+}
+
+a {
+    color: #5a1a32;
+}
+
+.my_fields {
+    all: unset;
+    border: none;
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+    border-bottom: 1px solid #5a1a32;
+}

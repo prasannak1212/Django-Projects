@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %} Crudify - Login {% endblock title %}
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock extrahead %}
+
+{% block content %}
+
+<body>
+
+    <div class="container form-layout">
+        <h2>Login to your account</h2>
+        <br>
+        <form method="POST" autocomplete="off">
+            {% csrf_token %}
+            {{form2|crispy}}
+            <br>
+            <button type="submit" class="btn w-100">Login</button>
+        </form>
+        <br>
+        <div class="text-center">
+            <p>Don't have an account?</p>
+            <a href="{% url 'register' %}">Register Here</a>
+        </div>
+    </div>
+    
+</body>
+
+{% endblock content %}

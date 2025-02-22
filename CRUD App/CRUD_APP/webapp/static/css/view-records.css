@@ -1,0 +1,46 @@
+.update-btn {
+    background-color: #0b6f1ddd;
+    color: aliceblue;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.return-btn {
+    background-color: #0b1c6fdd;
+    color: aliceblue;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.delete-btn {
+    background-color: #b40e0ebb;
+    color: aliceblue;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.card-body {
+    border: 2px solid #5a1a32;
+}
+
+.card-header {
+    background-color: #5a1a32;
+    color: #a8a8aa;
+}
+
+.card-body {
+    color: #5a1a32;
+    background-color: #a8a8aa;
+}
+
+.card-footer {
+    background-color: #5a1a32;
+}
+
+.my_fields {
+    border: none;
+    border-bottom: 1px solid #5a1a32;
+}
