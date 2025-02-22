@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} ZooZone - {{animal.name}} {% endblock title %}
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'css/animal.css' %}">
+{% endblock extrahead %}
+
+{% block content %}
+    <div class="container w-100 p-0">
+        <div class="card">
+            <div class="card-header d-flex container col-lg-12">
+                <div class="row col-lg-12">
+                    <img class="col-lg" src="{{animal.image.url}}" alt="{{animal.name}}">
+                    <div class="info col-lg p-3">
+                        <h2>{{ animal.name }}</h2>
+                        <p><strong>Food Habit: </strong>{{animal.food}}</p>
+                        <p><strong>Habitat: </strong>{{animal.habitat}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <h3>{{animal.documentary_title}}</h3>
+                <p class="animal-content">{{animal.details}}</p>
+            </div>
+            <div class="card-footer">
+                <a href="{% url 'home' %}"><button class="return">Return <i class="fa-solid fa-shield-dog"></i></button></a>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

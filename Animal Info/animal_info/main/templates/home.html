@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}ZooZone - Home{% endblock title %}
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock extrahead %}
+
+{% block content %}
+    <div class="filters">
+        <input id='search-input' type="search" placeholder="Search by name">
+        <br>
+        <div class="filter-btns">
+            <button class="btn h-btn filter-btn" data-filter="herbivore">Herbivore</button>
+            <button class="btn c-btn filter-btn" data-filter="carnivore">Carnivore</button>
+            <button class="btn o-btn filter-btn" data-filter="omnivore">Omnivore</button>
+            <button class="btn all filter-btn" data-filter="all">All Animals</button>
+        </div>
+    </div>
+    <div class="container-fluid col-lg-12">
+        <div class="row g-3 justify-content-center">
+            {% for animal in animals %}
+            <div href="{% url 'animal_info' animal.id %}" class="card col-lg-3 m-lg-4" data-name="{{animal.name}}|lower" data-food="{{animal.food}}">
+                <div class="card-image"><img src={{animal.image.url}} alt="{{animal.name}}"></div>
+                <div class="card-body">
+                    <h2>{{animal.name}}</h2>
+                    <hr>
+                    <p><strong>Food Habit: </strong>{{animal.food}}</p>
+                    <p><strong>Habitat: </strong>{{animal.habitat}}</p>
+                </div>
+                <div class="card-footer">
+                    <a href="{%url 'animal_info' animal.id %}">Read More</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock content%}
+
+
